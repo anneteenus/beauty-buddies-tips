@@ -17,7 +17,14 @@ export const GenderProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   useEffect(() => {
     localStorage.setItem('beauty-gender-mode', gender);
+    // Update data attribute on document element for CSS theming
+    document.documentElement.setAttribute('data-gender', gender);
   }, [gender]);
+
+  // Set initial theme on mount
+  useEffect(() => {
+    document.documentElement.setAttribute('data-gender', gender);
+  }, []);
 
   return (
     <GenderContext.Provider value={{ gender, setGender }}>

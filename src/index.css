@@ -37,6 +37,33 @@
 
     --radius: 0.75rem;
   }
+
+  [data-gender="men"] {
+    --background: 210 25% 98%;
+    --foreground: 210 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 15%;
+
+    --primary: 210 85% 65%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 210 25% 96%;
+    --secondary-foreground: 210 15% 20%;
+
+    --muted: 210 15% 96%;
+    --muted-foreground: 210 15% 40%;
+
+    --accent: 210 80% 95%;
+    --accent-foreground: 210 15% 20%;
+
+    --border: 210 15% 92%;
+    --input: 210 15% 92%;
+    --ring: 210 85% 85%;
+  }
 }
 
 @layer base {
