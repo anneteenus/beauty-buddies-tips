@@ -1,21 +1,28 @@
-
 import React, { useEffect, useState } from 'react';
+import { useGender } from '../contexts/GenderContext';
+import menHeroImg from '../assets/men-hero.jpg';
 
 const Hero: React.FC = () => {
+  const { gender } = useGender();
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
+  const womenBg = "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2187&q=80";
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-beauty-200/80 to-beauty-100/20 backdrop-blur-sm z-10"></div>
         <div 
-          className={`absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2187&q=80')] bg-cover bg-center transition-transform duration-[2s] ${
+          className={`absolute inset-0 bg-cover bg-center transition-all duration-[2s] ${
             isLoaded ? 'scale-100' : 'scale-110'
           }`}
+          style={{ 
+            backgroundImage: `url('${gender === 'men' ? menHeroImg : womenBg}')` 
+          }}
         ></div>
       </div>
       
@@ -26,21 +33,27 @@ const Hero: React.FC = () => {
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            Your Daily Beauty Companion
+            {gender === 'men' ? 'Your Daily Grooming Companion' : 'Your Daily Beauty Companion'}
           </span>
           <h1 
             className={`beauty-heading text-beauty-950 mb-6 transition-all duration-700 delay-100 ${
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            Elevate Your Beauty Routine With Expert Tips
+            {gender === 'men' 
+              ? 'Elevate Your Grooming Routine With Expert Tips'
+              : 'Elevate Your Beauty Routine With Expert Tips'
+            }
           </h1>
           <p 
             className={`text-lg md:text-xl text-beauty-800/90 mb-8 max-w-2xl mx-auto transition-all duration-700 delay-200 ${
               isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            Discover daily beauty insights, trending techniques, and professional advice to enhance your personal care ritual.
+            {gender === 'men'
+              ? 'Discover daily grooming insights, trending techniques, and professional advice to enhance your personal care ritual.'
+              : 'Discover daily beauty insights, trending techniques, and professional advice to enhance your personal care ritual.'
+            }
           </p>
           <div 
             className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 delay-300 ${
