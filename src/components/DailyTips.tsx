@@ -133,14 +133,14 @@ const DailyTips: React.FC = () => {
   }, []);
 
   return (
-    <section id="daily-tips" className="beauty-section bg-beauty-50/50">
+    <section id="daily-tips" className="beauty-section bg-secondary/50">
       <div className="beauty-container">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <span className="beauty-chip mb-4">Daily Essentials</span>
-          <h2 className="beauty-subheading text-beauty-900 mb-4">
+          <h2 className="beauty-subheading text-foreground mb-4">
             {gender === 'men' ? "Grooming Tips For Men" : "Beauty Tips For Women"}
           </h2>
-          <p className="text-beauty-700 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             {gender === 'men' 
               ? "Expert grooming advice from professionals to elevate your daily routine and master new techniques."
               : "Curated advice from beauty experts to enhance your daily routine and discover new techniques."
@@ -155,8 +155,8 @@ const DailyTips: React.FC = () => {
               onClick={() => setSelectedCategory(category)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-beauty-500 text-white shadow-sm'
-                  : 'bg-white border border-beauty-200 text-beauty-700 hover:bg-beauty-50'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'bg-card border border-border text-foreground hover:bg-accent'
               }`}
             >
               {category}
@@ -168,7 +168,7 @@ const DailyTips: React.FC = () => {
           {filteredTips.map((tip, index) => (
             <div 
               key={tip.id} 
-              className={`bg-white rounded-xl overflow-hidden shadow-sm border border-beauty-100 transition-all duration-500 hover:shadow-md hover:translate-y-[-4px] ${
+              className={`bg-card rounded-xl overflow-hidden shadow-sm border border-border transition-all duration-500 hover:shadow-md hover:translate-y-[-4px] ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${150 * (index % 4)}ms` }}
@@ -183,9 +183,9 @@ const DailyTips: React.FC = () => {
               </div>
               <div className="p-5">
                 <div className="beauty-chip mb-3">{tip.category}</div>
-                <h3 className="font-serif text-xl font-semibold mb-2 text-beauty-900">{tip.title}</h3>
-                <p className="text-beauty-700 text-sm mb-4">{tip.description}</p>
-                <a href="#" className="inline-flex items-center text-beauty-600 font-medium hover:text-beauty-700 transition-colors">
+                <h3 className="font-serif text-xl font-semibold mb-2 text-foreground">{tip.title}</h3>
+                <p className="text-muted-foreground text-sm mb-4">{tip.description}</p>
+                <a href="#" className="inline-flex items-center text-primary font-medium hover:opacity-80 transition-colors">
                   Read more
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
