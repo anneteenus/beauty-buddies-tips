@@ -124,12 +124,12 @@ const Footer: React.FC = () => {
   ];
   
   return (
-    <footer className="bg-beauty-50 mt-24 border-t border-beauty-100">
+    <footer className="bg-secondary mt-24 border-t border-border">
       <div className="beauty-container py-16">
         <div className="flex flex-col md:flex-row flex-wrap gap-12">
           <div className="w-full md:w-1/3 lg:pr-12">
             <Logo className="mb-6" />
-            <p className="text-beauty-700 mb-6">
+            <p className="text-muted-foreground mb-6">
               Your daily source for beauty tips, trends, and personalized advice to enhance your beauty routine.
             </p>
             <div className="flex space-x-4">
@@ -138,7 +138,7 @@ const Footer: React.FC = () => {
                   key={index} 
                   href={social.url} 
                   aria-label={social.name}
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-beauty-200 text-beauty-700 hover:bg-beauty-100 hover:text-beauty-900 transition-colors"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-card border border-border text-foreground hover:bg-accent hover:text-primary transition-colors"
                 >
                   {social.icon}
                 </a>
@@ -150,13 +150,13 @@ const Footer: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {footerLinks.map((group, groupIndex) => (
                 <div key={groupIndex}>
-                  <h3 className="font-medium text-beauty-900 mb-4">{group.title}</h3>
+                  <h3 className="font-medium text-foreground mb-4">{group.title}</h3>
                   <ul className="space-y-3">
                     {group.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
                         <a 
                           href={link.url} 
-                          className="text-beauty-700 hover:text-beauty-900 transition-colors"
+                          className="text-muted-foreground hover:text-primary transition-colors"
                         >
                           {link.name}
                         </a>
@@ -169,13 +169,13 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="mt-16 pt-8 border-t border-beauty-100 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-beauty-700 text-sm mb-4 md:mb-0">
+        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center">
+          <p className="text-muted-foreground text-sm mb-4 md:mb-0">
             © {currentYear} BeautyBuddy (b2tips.com). All rights reserved.
           </p>
           <div className="flex space-x-8">
-            <a href="#" className="text-beauty-700 hover:text-beauty-900 text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-beauty-700 hover:text-beauty-900 text-sm transition-colors">Terms of Service</a>
+            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Privacy Policy</a>
+            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

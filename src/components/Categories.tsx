@@ -98,12 +98,12 @@ const Categories: React.FC = () => {
   const categories = gender === 'men' ? MEN_CATEGORIES : WOMEN_CATEGORIES;
   
   return (
-    <section id="categories" className="beauty-section bg-gradient-to-b from-white to-beauty-50/80">
+    <section id="categories" className="beauty-section bg-gradient-to-b from-card to-secondary/80">
       <div className="beauty-container">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <span className="beauty-chip mb-4">Explore Topics</span>
-          <h2 className="beauty-subheading text-beauty-900 mb-4">Browse By Category</h2>
-          <p className="text-beauty-700 max-w-2xl mx-auto">
+          <h2 className="beauty-subheading text-foreground mb-4">Browse By Category</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             {gender === 'men'
               ? 'Discover specialized grooming advice organized by category to find exactly what you need.'
               : 'Discover specialized beauty advice organized by category to find exactly what you\'re looking for.'
@@ -120,7 +120,7 @@ const Categories: React.FC = () => {
               }`}
               style={{ transitionDelay: `${150 * (index % 3)}ms` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-beauty-900/80 via-beauty-900/20 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
                 <img 
                   src={category.image} 
@@ -135,7 +135,7 @@ const Categories: React.FC = () => {
                 <div className="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                   <a 
                     href="#"
-                    className="inline-flex items-center text-white font-medium hover:text-beauty-200 transition-colors"
+                    className="inline-flex items-center text-white font-medium hover:opacity-80 transition-colors"
                   >
                     Explore Category
                     <svg 
