@@ -1,0 +1,66 @@
+{
+  "project_name": "Beauty_Buddies_Tips_UX_Redesign",
+  "contact_email": "anneteenu1234@gmail.com",
+  "goal_summary": "Implement a performance and feature-focused mobile UI/UX redesign to address user complaints on speed, stability, review flow, and rewards clarity. Adopt a 5-tab bottom navigation.",
+  "performance_requirements": [
+    "Eliminate all reported UI lag, especially in the main feed (smooth scrolling for image/video content).",
+    "Ensure app stability; prevent crashes during photo/video review submission.",
+    "Optimize all loading states to be fast and user-friendly."
+  ],
+  "navigation": {
+    "type": "Bottom_TabBar",
+    "tabs": [
+      {
+        "name": "Home",
+        "icon": "home",
+        "priority": "High",
+        "content_focus": "New Product Sampling Campaigns, personalized recommendations, community feed.",
+        "enhancement": "Display a prominent, dynamic 'Point Progress' banner (e.g., 'X points until next tier/reward')."
+      },
+      {
+        "name": "Scan / Search",
+        "icon": "search",
+        "priority": "High",
+        "content_focus": "Instant product lookup via text or barcode.",
+        "enhancement": "Improve Barcode Scanner accuracy and speed. Implement a streamlined 'Product Not Found' workflow for users to easily submit new product data and be the first reviewer."
+      },
+      {
+        "name": "Review (Create)",
+        "icon": "pen",
+        "priority": "High",
+        "content_focus": "User review submission form.",
+        "enhancement": "Implement a multi-step, guided form (not a single text box). Required fields should include: Star Rating Breakdown (Value, Texture, Effectiveness), Skin Type selection, and a highly stable, fast flow for uploading Video/Photo Proof."
+      },
+      {
+        "name": "Rewards Hub",
+        "icon": "gift",
+        "priority": "Critical",
+        "content_focus": "User loyalty status and rewards management.",
+        "enhancement": "CREATE A DEDICATED HUB. Clearly show: Current Points, Next Milestone/Reward Goal. Crucially, add a **'My Free Products'** section with status tracking (Eligible, Awaiting Shipment, Review Due). Include a prominent, bug-free section to **confirm/edit the shipping address**."
+      },
+      {
+        "name": "Profile / Me",
+        "icon": "user",
+        "priority": "Medium",
+        "content_focus": "Account management, history, and settings.",
+        "enhancement": "Ensure easy access to 'Review History', 'Redeemed Rewards Log', and the 'About Me' profile for updating campaign-targeting details."
+      }
+    ]
+  },
+  "key_actions": [
+    {
+      "action": "Redeem_Points",
+      "location": "Rewards Hub",
+      "requirement": "The redemption checkout must clearly state the **estimated fulfillment/delivery time** (e.g., 'Voucher delivery: 3-5 days') *before* the user confirms the transaction."
+    },
+    {
+      "action": "Participate_in_Campaign",
+      "location": "Home / Feed",
+      "requirement": "A clear, working button for **one-click application** to a sampling campaign, with instant feedback on eligibility/submission success."
+    }
+  ],
+  "developer_notes": [
+    "Focus on mobile-first design and modern component libraries for the best performance.",
+    "The primary goal is to address existing user frustration with the app's speed and lack of transparency regarding rewards/shipping."
+  ]
+}
