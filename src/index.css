@@ -39,30 +39,30 @@
   }
 
   [data-gender="men"] {
-    --background: 210 25% 98%;
-    --foreground: 210 15% 15%;
+    --background: 210 30% 97%;
+    --foreground: 215 25% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 15% 15%;
+    --card-foreground: 215 25% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 15% 15%;
+    --popover-foreground: 215 25% 12%;
 
-    --primary: 210 85% 65%;
-    --primary-foreground: 210 20% 98%;
+    --primary: 215 90% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 25% 96%;
-    --secondary-foreground: 210 15% 20%;
+    --secondary: 210 40% 92%;
+    --secondary-foreground: 215 25% 15%;
 
-    --muted: 210 15% 96%;
-    --muted-foreground: 210 15% 40%;
+    --muted: 210 30% 94%;
+    --muted-foreground: 215 15% 40%;
 
-    --accent: 210 80% 95%;
-    --accent-foreground: 210 15% 20%;
+    --accent: 215 85% 92%;
+    --accent-foreground: 215 25% 15%;
 
-    --border: 210 15% 92%;
-    --input: 210 15% 92%;
-    --ring: 210 85% 85%;
+    --border: 210 25% 88%;
+    --input: 210 25% 88%;
+    --ring: 215 90% 60%;
   }
 }
 
