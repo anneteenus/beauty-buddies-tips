@@ -2,8 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
+import { useGender } from '../contexts/GenderContext';
 
 const Navbar: React.FC = () => {
+  const { gender, setGender } = useGender();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -45,6 +47,28 @@ const Navbar: React.FC = () => {
                 {item}
               </a>
             ))}
+            <div className="flex items-center gap-2 bg-beauty-100 rounded-full p-1">
+              <button
+                onClick={() => setGender('women')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  gender === 'women' 
+                    ? 'bg-beauty-500 text-white shadow-sm' 
+                    : 'text-beauty-700 hover:text-beauty-900'
+                }`}
+              >
+                Women
+              </button>
+              <button
+                onClick={() => setGender('men')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  gender === 'men' 
+                    ? 'bg-beauty-500 text-white shadow-sm' 
+                    : 'text-beauty-700 hover:text-beauty-900'
+                }`}
+              >
+                Men
+              </button>
+            </div>
             <button className="beauty-button">Subscribe</button>
           </nav>
           
@@ -73,6 +97,28 @@ const Navbar: React.FC = () => {
                 {item}
               </a>
             ))}
+            <div className="flex items-center gap-2 bg-beauty-100 rounded-full p-1 my-2">
+              <button
+                onClick={() => setGender('women')}
+                className={`flex-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  gender === 'women' 
+                    ? 'bg-beauty-500 text-white shadow-sm' 
+                    : 'text-beauty-700'
+                }`}
+              >
+                Women
+              </button>
+              <button
+                onClick={() => setGender('men')}
+                className={`flex-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  gender === 'men' 
+                    ? 'bg-beauty-500 text-white shadow-sm' 
+                    : 'text-beauty-700'
+                }`}
+              >
+                Men
+              </button>
+            </div>
             <button className="beauty-button mt-2">Subscribe</button>
           </nav>
         </div>
